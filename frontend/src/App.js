@@ -39,7 +39,9 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { Ecommerce, Orders, Calendar,Employees,PersonalProfile, AcademicInformation,ProfessionalInformation, WorkExperience,
+  CreateJobVacancy, Referees,CertificationTraining, ProfessionalBodyMembership,
+  Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -102,7 +104,14 @@ const App = () => {
                 {/* dashboard  */}
                 <Route path="/" element={(<Ecommerce />)} />
                 <Route path="/ecommerce" element={(<Ecommerce />)} />
-
+                <Route path="/PersonalProfile" element={(<PersonalProfile />)} />
+                <Route path="/AcademicInformation" element={(<AcademicInformation />)} />
+                <Route path="/ProfessionalInformation" element={(<ProfessionalInformation />)} />
+                <Route path="/WorkExperience" element={(<WorkExperience />)} />
+                <Route path="/CreateJobVacancy" element={(<CreateJobVacancy />)} />
+                <Route path="/Referees" element={(<Referees />)} />
+                <Route path="/CertificationTraining" element={(<CertificationTraining />)} />
+                <Route path="/ProfessionalBodyMembership" element={(<ProfessionalBodyMembership />)} />
                 {/* pages  */}
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />

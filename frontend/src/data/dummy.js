@@ -485,8 +485,46 @@ export const links = [
     links: [
       {
         name: 'orders',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'PersonalProfile',
         icon: <AiOutlineShoppingCart />,
       },
+      {
+        name: 'AcademicInformation',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'ProfessionalInformation',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'WorkExperience',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'CreateJobVacancy',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'Referees',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'CertificationTraining',
+        icon: <RiContactsLine />,
+        
+      },
+      {
+        name: 'ProfessionalBodyMembership',
+        icon: <AiOutlineCalendar />,
+        
+      },
+      // {
+      //   name: 'ProfessionalBodyMembership',
+      //   icon: <AiOutlineCalendar />,
+      // },
       {
         name: 'employees',
         icon: <IoMdContacts />,
