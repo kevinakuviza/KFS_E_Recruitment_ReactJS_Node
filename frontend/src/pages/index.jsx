@@ -11,6 +11,7 @@ export { default as ProfessionalInformation } from './ProfessionalInformation';
 export { default as Referees } from './Referees';
 export { default as CertificationTraining } from './CertificationTraining';
 export { default as ProfessionalBodyMembership } from './ProfessionalBodyMembership';
+export { default as AddUser } from './AddUser';
 // export { default as WorkExperience } from './WorkExperience';
 export { default as Editor } from './Editor';
 export { default as Customers } from './Customers';

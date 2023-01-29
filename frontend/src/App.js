@@ -40,7 +40,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calendar,Employees,PersonalProfile, AcademicInformation,ProfessionalInformation, WorkExperience,
-  CreateJobVacancy, Referees,CertificationTraining, ProfessionalBodyMembership,
+  CreateJobVacancy, Referees,CertificationTraining, ProfessionalBodyMembership, AddUser,
   Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
@@ -112,6 +112,7 @@ const App = () => {
                 <Route path="/Referees" element={(<Referees />)} />
                 <Route path="/CertificationTraining" element={(<CertificationTraining />)} />
                 <Route path="/ProfessionalBodyMembership" element={(<ProfessionalBodyMembership />)} />
+                <Route path="/AddUser" element={(<AddUser />)} />
                 {/* pages  */}
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />

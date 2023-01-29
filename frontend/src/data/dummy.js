@@ -390,7 +390,47 @@ export const LinePrimaryYAxis = {
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
 };
+export const professionalMembershipGrid = [
+  { type: 'checkbox', width: '50' },
+  { headerText: 'Name',
+    width: '150',
+    template: customerGridImage,
+    textAlign: 'Center' },
+  { field: 'ProjectName',
+    headerText: 'Professional Body',
+    width: '150',
+    textAlign: 'Center' },
+  { field: 'Status',
+    headerText: 'Status',
+    width: '130',
+    format: 'yMd',
+    textAlign: 'Center',
+    template: customerGridStatus },
+  {
+    field: 'Weeks',
+    headerText: 'Registration Number',
+    width: '100',
+    format: 'C2',
+    textAlign: 'Center' },
+  { field: 'Budget',
+    headerText: 'Membership Type',
+    width: '100',
+    format: 'yMd',
+    textAlign: 'Center' },
 
+  { field: 'Location',
+    headerText: 'Renewal status',
+    width: '150',
+    textAlign: 'Center' },
+
+  { field: 'CustomerID',
+    headerText: 'Applicant ID',
+    width: '120',
+    textAlign: 'Center',
+    isPrimaryKey: true,
+  },
+
+];
 export const customersGrid = [
   { type: 'checkbox', width: '50' },
   { headerText: 'Name',
@@ -525,6 +565,10 @@ export const links = [
       //   name: 'ProfessionalBodyMembership',
       //   icon: <AiOutlineCalendar />,
       // },
+      {
+        name: 'AddUser',
+        icon: <IoMdContacts />,
+      },
       {
         name: 'employees',
         icon: <IoMdContacts />,
@@ -956,7 +1000,20 @@ export const ordersGrid = [
     textAlign: 'Center',
   },
 ];
-
+export const professionalMembershipData = [
+  {
+    CustomerID: 1001,
+    CustomerName: 'CISCO ACADEMY',
+    CustomerEmail: 'nirav@gmail.com',
+    CustomerImage:
+      avatar2,
+    ProjectName: 'Hosting Press HTML',
+    Status: 'Active',
+    StatusBg: '#8BE78B',
+    Weeks: '40',
+    Budget: 'ACTIVE MEMBERSHIP',
+    Location: 'VALID TILL 2023',
+  }];
 export const customersData = [
   {
     CustomerID: 1001,
