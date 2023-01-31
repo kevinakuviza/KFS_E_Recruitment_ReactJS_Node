@@ -39,8 +39,8 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar,Employees,PersonalProfile, AcademicInformation,ProfessionalInformation, WorkExperience,
-  CreateJobVacancy, Referees,CertificationTraining, ProfessionalBodyMembership, AddUser,
+import { Dashboard, AcademicInformation, ProfessionalInformation, WorkExperience,
+  CreateJobVacancy, Referees, CertificationTraining, ProfessionalBodyMembership, AddUser, Orders, Calendar, Employees, PersonalProfile,
   Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
@@ -102,8 +102,8 @@ const App = () => {
 
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/ecommerce" element={(<Ecommerce />)} />
+                <Route path="/" element={(<Dashboard />)} />
+                <Route path="/Dashboard" element={(<Dashboard />)} />
                 <Route path="/PersonalProfile" element={(<PersonalProfile />)} />
                 <Route path="/AcademicInformation" element={(<AcademicInformation />)} />
                 <Route path="/ProfessionalInformation" element={(<ProfessionalInformation />)} />

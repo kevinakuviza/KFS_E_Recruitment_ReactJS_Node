@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-// import { WorkExperience } from '.';
-
+import "../../../css/user.css";
 const useStyles = makeStyles({
     loginpage: {
         minWidth: '100vw',
@@ -52,7 +51,6 @@ const useStyles = makeStyles({
         '& .form_control': {
             '& input': {
                 display: 'block',
-                fontSize: 'large',
                 width: '100%',
                 padding: '.4rem .4rem',
                 background: '#000',
@@ -66,7 +64,7 @@ const useStyles = makeStyles({
                 }
             },
             '& button[type="submit"]': {
-                width: '75%',
+                width: '100%',
                 padding: '.2rem',
                 background: '#B7CA33',
                 outline: 'none',
@@ -89,8 +87,9 @@ const useStyles = makeStyles({
 
     }
 })
-export function Referees() {
+export function AcademicInformation() {
     const design_show = useRef('');
+
     const classes = useStyles();
 
     const btnFunc = (event) => {
@@ -119,7 +118,7 @@ export function Referees() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -127,43 +126,31 @@ export function Referees() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">Referees Full Name(s)</label>
-                    <input type="email" placeholder="Referees Full Name(s)" />
+                    <label htmlFor="">Institution Name</label>
+                    <input type="email" placeholder="Institution Name" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Occupation</label>
-                    <input type="email" placeholder="Occupation" />
+                    <label htmlFor="">Start Date</label>
+                    <input type="email" placeholder="Start Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Postal Code /Address</label>
-                    <input type="email" placeholder="Postal Code /Address" />
+                    <label htmlFor="">End Date</label>
+                    <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Mobile Number</label>
-                    <input type="email" placeholder="Mobile Number" />
+                    <label htmlFor="">Course Name</label>
+                    <input type="email" placeholder="Course Name" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Email Address</label>
-                    <input type="email" placeholder="Email Address" />
-                </Box>
-                {/* <Box class="form_control">
-                    <label htmlFor="">Postal Code</label>
-                    <input type="email" placeholder="Position held" />
-                </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Achievements</label>
-                    <input type="email" placeholder="Achievements" />
-                </Box> */}
-                {/* <Box class="form_control">
                     <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
-                </Box> */}
+                </Box>
                 {/* <Box class="form_control">
                     <label htmlFor=""></label>
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Add [Referees] Information</button>
+                    <button type="submit">Create Academic Information</button>
                 </Box>
                
                 <br />
@@ -175,11 +162,11 @@ export function Referees() {
                     </a>
 
                     <Box class="form_control">
-                    <button type="submit">Click Next to continue filling your profile</button>
+                    <button type="submit">Click Next</button>
                 </Box>
                 </Box>
             </form>
         </div>
     )
 }
-export default Referees;
+export default AcademicInformation;

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-
+import "../../../css/user.css";
 const useStyles = makeStyles({
     loginpage: {
         minWidth: '100vw',
@@ -51,7 +51,6 @@ const useStyles = makeStyles({
         '& .form_control': {
             '& input': {
                 display: 'block',
-                fontSize: 'large',
                 width: '100%',
                 padding: '.4rem .4rem',
                 background: '#000',
@@ -88,7 +87,7 @@ const useStyles = makeStyles({
 
     }
 })
-export function ProfessionalInformation() {
+export function CertificationTraining() {
     const design_show = useRef('');
 
     const classes = useStyles();
@@ -119,7 +118,7 @@ export function ProfessionalInformation() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -139,19 +138,19 @@ export function ProfessionalInformation() {
                     <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Course Name</label>
-                    <input type="email" placeholder="Course Name" />
+                    <label htmlFor="">Certificate awarded</label>
+                    <input type="email" placeholder="Certificate awarded" />
                 </Box>
-                <Box class="form_control">
+                {/* <Box class="form_control">
                     <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
-                </Box>
+                </Box> */}
                 {/* <Box class="form_control">
                     <label htmlFor=""></label>
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Create Professional Information</button>
+                    <button type="submit">Create [certificate and training awarded] Information</button>
                 </Box>
                
                 <br />
@@ -163,11 +162,11 @@ export function ProfessionalInformation() {
                     </a>
 
                     <Box class="form_control">
-                    <button type="submit">Click Next to continue filling your profile</button>
+                    <button type="submit">Click Next</button>
                 </Box>
                 </Box>
             </form>
         </div>
     )
 }
-export default ProfessionalInformation;
+export default CertificationTraining;

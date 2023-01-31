@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-import "../css/user.css";
+// import { WorkExperience } from '.';
+
 const useStyles = makeStyles({
     loginpage: {
         minWidth: '100vw',
@@ -51,6 +52,7 @@ const useStyles = makeStyles({
         '& .form_control': {
             '& input': {
                 display: 'block',
+                fontSize: 'large',
                 width: '100%',
                 padding: '.4rem .4rem',
                 background: '#000',
@@ -87,9 +89,8 @@ const useStyles = makeStyles({
 
     }
 })
-export function AcademicInformation() {
+export function WorkExperience() {
     const design_show = useRef('');
-
     const classes = useStyles();
 
     const btnFunc = (event) => {
@@ -118,7 +119,7 @@ export function AcademicInformation() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -126,8 +127,8 @@ export function AcademicInformation() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">Institution Name</label>
-                    <input type="email" placeholder="Institution Name" />
+                    <label htmlFor="">Organization Name</label>
+                    <input type="email" placeholder="Organization Name" />
                 </Box>
                 <Box class="form_control">
                     <label htmlFor="">Start Date</label>
@@ -138,19 +139,23 @@ export function AcademicInformation() {
                     <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Course Name</label>
-                    <input type="email" placeholder="Course Name" />
+                    <label htmlFor="">Position</label>
+                    <input type="email" placeholder="Position held" />
                 </Box>
                 <Box class="form_control">
+                    <label htmlFor="">Achievements</label>
+                    <input type="email" placeholder="Achievements" />
+                </Box>
+                {/* <Box class="form_control">
                     <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
-                </Box>
+                </Box> */}
                 {/* <Box class="form_control">
                     <label htmlFor=""></label>
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Create Academic Information</button>
+                    <button type="submit">Add [work experience] Information</button>
                 </Box>
                
                 <br />
@@ -162,11 +167,11 @@ export function AcademicInformation() {
                     </a>
 
                     <Box class="form_control">
-                    <button type="submit">Click Next</button>
+                    <button type="submit">Click Next to continue filling your profile</button>
                 </Box>
                 </Box>
             </form>
         </div>
     )
 }
-export default AcademicInformation;
+export default WorkExperience;

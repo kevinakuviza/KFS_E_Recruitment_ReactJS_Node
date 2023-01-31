@@ -1,6 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-// import { WorkExperience } from '.';
+import Table from 'react-bootstrap/Table';
+// import React from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Selection, Inject, Edit, Toolbar, Sort, Filter } from '@syncfusion/ej2-react-grids';
+
+import { professionalMembershipData, professionalMembershipGrid } from '../../../data/dummy';
+import { Header } from '../../../components';
 
 const useStyles = makeStyles({
     loginpage: {
@@ -89,7 +94,11 @@ const useStyles = makeStyles({
 
     }
 })
-export function WorkExperience() {
+// export function ProfessionalBodyMembership() {
+    const ProfessionalBodyMembership = () => {
+        const selectionsettings = { persistSelection: true };
+        const toolbarOptions = ['Delete'];
+        const editing = { allowDeleting: true, allowEditing: true };
     const design_show = useRef('');
     const classes = useStyles();
 
@@ -113,13 +122,16 @@ export function WorkExperience() {
         }
 
     }
-
+ 
+       
+   
 
     return (
-        <div className={classes.loginpage}>
+    <React.Fragment>
+        <div className={classes.loginpage}> 
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -127,29 +139,21 @@ export function WorkExperience() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">User Full name(s)</label>
-                    <input type="email" placeholder="User Full name(s)" />
+                    <label htmlFor="">Professional Body</label>
+                    <input type="email" placeholder="Professional Body" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Roles</label>
-                    <input type="email" placeholder="Roles" />
+                    <label htmlFor="">Registration Number</label>
+                    <input type="email" placeholder="Start Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Department</label>
-                    <input type="email" placeholder="Department" />
+                    <label htmlFor="">Membership Type</label>
+                    <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Email Address</label>
-                    <input type="email" placeholder="Email Address" />
+                    <label htmlFor="">Renewal Time</label>
+                    <input type="email" placeholder="Course Name" />
                 </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Password</label>
-                    <input type="password" placeholder="Password" />
-                </Box>
-                {/* <Box class="form_control">
-                    <label htmlFor="">Achievements</label>
-                    <input type="email" placeholder="Achievements" />
-                </Box> */}
                 {/* <Box class="form_control">
                     <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
@@ -159,12 +163,13 @@ export function WorkExperience() {
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Create User</button>
+                    <button type="submit">Create [Professional Membership] Information</button>
                 </Box>
                
                 <br />
                 <br />
                 <hr />
+    
                 <Box className="form_bottom" display="flex" justifyContent="space-between">
                     <a href="#">
                         Registration
@@ -174,8 +179,31 @@ export function WorkExperience() {
                     <button type="submit">Click Next to continue filling your profile</button>
                 </Box>
                 </Box>
+    
             </form>
+            
         </div>
+        <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+      <Header category="Page" title="Customers" />
+      <GridComponent
+        dataSource={professionalMembershipData}
+        enableHover={false}
+        allowPaging
+        pageSettings={{ pageCount: 5 }}
+        selectionSettings={selectionsettings}
+        toolbar={toolbarOptions}
+        editSettings={editing}
+        allowSorting
+      >
+        <ColumnsDirective>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          {professionalMembershipGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
+        </ColumnsDirective>
+        <Inject services={[Page, Selection, Toolbar, Edit, Sort, Filter]} />
+      </GridComponent>
+    </div>
+        </React.Fragment>
     )
-}
-export default WorkExperience;
+   
+};
+export default ProfessionalBodyMembership;

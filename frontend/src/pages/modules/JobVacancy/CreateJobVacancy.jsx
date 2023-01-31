@@ -119,7 +119,7 @@ export function CreateJobVacancy() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>

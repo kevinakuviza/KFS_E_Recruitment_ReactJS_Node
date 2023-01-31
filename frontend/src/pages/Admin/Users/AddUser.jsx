@@ -119,7 +119,7 @@ export function WorkExperience() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -127,25 +127,29 @@ export function WorkExperience() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">Organization Name</label>
-                    <input type="email" placeholder="Organization Name" />
+                    <label htmlFor="">User Full name(s)</label>
+                    <input type="email" placeholder="User Full name(s)" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Start Date</label>
-                    <input type="email" placeholder="Start Date" />
+                    <label htmlFor="">Roles</label>
+                    <input type="email" placeholder="Roles" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">End Date</label>
-                    <input type="email" placeholder="End Date" />
+                    <label htmlFor="">Department</label>
+                    <input type="email" placeholder="Department" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Position</label>
-                    <input type="email" placeholder="Position held" />
+                    <label htmlFor="">Email Address</label>
+                    <input type="email" placeholder="Email Address" />
                 </Box>
                 <Box class="form_control">
+                    <label htmlFor="">Password</label>
+                    <input type="password" placeholder="Password" />
+                </Box>
+                {/* <Box class="form_control">
                     <label htmlFor="">Achievements</label>
                     <input type="email" placeholder="Achievements" />
-                </Box>
+                </Box> */}
                 {/* <Box class="form_control">
                     <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
@@ -155,7 +159,7 @@ export function WorkExperience() {
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Add [work experience] Information</button>
+                    <button type="submit">Create User</button>
                 </Box>
                
                 <br />
