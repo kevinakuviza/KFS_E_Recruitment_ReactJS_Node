@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-// import { WorkExperience } from '.';
 
 const useStyles = makeStyles({
     loginpage: {
@@ -89,8 +88,9 @@ const useStyles = makeStyles({
 
     }
 })
-export function WorkExperience() {
+export function CreateJobVacancy() {
     const design_show = useRef('');
+
     const classes = useStyles();
 
     const btnFunc = (event) => {
@@ -119,7 +119,7 @@ export function WorkExperience() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -127,41 +127,37 @@ export function WorkExperience() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">Organization Name</label>
-                    <input type="email" placeholder="Organization Name" />
+                    <label htmlFor="">Job Title</label>
+                    <input type="email" placeholder="Job Title" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Start Date</label>
+                    <label htmlFor="">Number of Vacancy Sought</label>
                     <input type="email" placeholder="Start Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">End Date</label>
+                    <label htmlFor="">Grade</label>
                     <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Position</label>
-                    <input type="email" placeholder="Position held" />
+                    <label htmlFor="">Application Deadline</label>
+                    <input type="email" placeholder="Course Name" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Achievements</label>
-                    <input type="email" placeholder="Achievements" />
-                </Box>
-                {/* <Box class="form_control">
-                    <label htmlFor="">Specialisation</label>
+                    <label htmlFor="">Reference Number:</label>
                     <input type="email" placeholder="Specialisation" />
-                </Box> */}
+                </Box>
                 {/* <Box class="form_control">
                     <label htmlFor=""></label>
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Add [work experience] Information</button>
+                    <button type="submit">Create Job Vacancy Information</button>
                 </Box>
                
                 <br />
                 <br />
                 <hr />
-                <Box className="form_bottom" display="flex" justifyContent="space-between">
+                {/* <Box className="form_bottom" display="flex" justifyContent="space-between">
                     <a href="#">
                         Registration
                     </a>
@@ -169,9 +165,9 @@ export function WorkExperience() {
                     <Box class="form_control">
                     <button type="submit">Click Next to continue filling your profile</button>
                 </Box>
-                </Box>
+                </Box> */}
             </form>
         </div>
     )
 }
-export default WorkExperience;
+export default CreateJobVacancy;

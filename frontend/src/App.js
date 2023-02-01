@@ -38,11 +38,19 @@
 // import { FiSettings } from 'react-icons/fi';
 // import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+<<<<<<< HEAD
 // import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 // import { Ecommerce, Orders, Calendar,Employees,PersonalProfile, AcademicInformation,ProfessionalInformation, WorkExperience,
 //   CreateJobVacancy, Referees,CertificationTraining, ProfessionalBodyMembership, AddUser,
 //   Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 // import './App.css';
+=======
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Dashboard, AcademicInformation, ProfessionalInformation, WorkExperience,
+  CreateJobVacancy, Referees, CertificationTraining, ProfessionalBodyMembership, AddUser, Orders, Calendar, Employees, PersonalProfile,
+  Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import './App.css';
+>>>>>>> a32e4f9826d4afeebfe82e1614c5bfab91279129
 
 // import { useStateContext } from './contexts/ContextProvider';
 
@@ -148,9 +156,11 @@ import { useRoutes } from "react-router-dom";
 import Themeroutes from "./routes/Router";
 import React, { Component }  from 'react';
 const App = () => {
+
   const routing = useRoutes(Themeroutes);
 
   return <div className="dark">{routing}</div>;
+
 };
 
 export default App;

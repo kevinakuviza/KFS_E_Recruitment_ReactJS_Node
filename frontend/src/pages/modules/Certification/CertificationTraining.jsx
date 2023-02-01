@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-
+import "../../../css/user.css";
 const useStyles = makeStyles({
     loginpage: {
         minWidth: '100vw',
@@ -51,7 +51,6 @@ const useStyles = makeStyles({
         '& .form_control': {
             '& input': {
                 display: 'block',
-                fontSize: 'large',
                 width: '100%',
                 padding: '.4rem .4rem',
                 background: '#000',
@@ -88,7 +87,7 @@ const useStyles = makeStyles({
 
     }
 })
-export function CreateJobVacancy() {
+export function CertificationTraining() {
     const design_show = useRef('');
 
     const classes = useStyles();
@@ -119,7 +118,7 @@ export function CreateJobVacancy() {
         <div className={classes.loginpage}>
             <form action="" className="formWrapper">
                 <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
                 </Box>
                 {/* <Box className="btn_wrapper">
                     <div ref={design_show} className={`btn_design_show `}></div>
@@ -127,47 +126,47 @@ export function CreateJobVacancy() {
                     <button type="button" onClick={btnFunc}>API Key</button>
                 </Box> */}
                 <Box class="form_control">
-                    <label htmlFor="">Job Title</label>
-                    <input type="email" placeholder="Job Title" />
+                    <label htmlFor="">Institution Name</label>
+                    <input type="email" placeholder="Institution Name" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Number of Vacancy Sought</label>
+                    <label htmlFor="">Start Date</label>
                     <input type="email" placeholder="Start Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Grade</label>
+                    <label htmlFor="">End Date</label>
                     <input type="email" placeholder="End Date" />
                 </Box>
                 <Box class="form_control">
-                    <label htmlFor="">Application Deadline</label>
-                    <input type="email" placeholder="Course Name" />
+                    <label htmlFor="">Certificate awarded</label>
+                    <input type="email" placeholder="Certificate awarded" />
                 </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Reference Number:</label>
+                {/* <Box class="form_control">
+                    <label htmlFor="">Specialisation</label>
                     <input type="email" placeholder="Specialisation" />
-                </Box>
+                </Box> */}
                 {/* <Box class="form_control">
                     <label htmlFor=""></label>
                     <input type="password" placeholder="Password" />
                 </Box> */}
                 <Box class="form_control">
-                    <button type="submit">Create Job Vacancy Information</button>
+                    <button type="submit">Create [certificate and training awarded] Information</button>
                 </Box>
                
                 <br />
                 <br />
                 <hr />
-                {/* <Box className="form_bottom" display="flex" justifyContent="space-between">
+                <Box className="form_bottom" display="flex" justifyContent="space-between">
                     <a href="#">
                         Registration
                     </a>
 
                     <Box class="form_control">
-                    <button type="submit">Click Next to continue filling your profile</button>
+                    <button type="submit">Click Next</button>
                 </Box>
-                </Box> */}
+                </Box>
             </form>
         </div>
     )
 }
-export default CreateJobVacancy;
+export default CertificationTraining;

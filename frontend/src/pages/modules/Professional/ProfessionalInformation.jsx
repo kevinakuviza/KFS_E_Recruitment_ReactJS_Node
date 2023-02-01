@@ -117,6 +117,7 @@ export function ProfessionalInformation() {
 
 
     return (
+<<<<<<< HEAD:frontend/src/pages/ProfessionalInformation.jsx
         <React.Fragment>
                 <div class="row">
         <div class="col-md-4">
@@ -129,6 +130,59 @@ export function ProfessionalInformation() {
                         <strong></strong>
                 </span>
           
+=======
+        <div className={classes.loginpage}>
+            <form action="" className="formWrapper">
+                <Box className="form_header" textAlign="center" m={2}>
+                    <a href="#"> <img src={require('../../../kfs.png')} alt="" /></a>
+                </Box>
+                {/* <Box className="btn_wrapper">
+                    <div ref={design_show} className={`btn_design_show `}></div>
+                    <button type="button" onClick={btnFunc} className="active">E-mail</button>
+                    <button type="button" onClick={btnFunc}>API Key</button>
+                </Box> */}
+                <Box class="form_control">
+                    <label htmlFor="">Institution Name</label>
+                    <input type="email" placeholder="Institution Name" />
+                </Box>
+                <Box class="form_control">
+                    <label htmlFor="">Start Date</label>
+                    <input type="email" placeholder="Start Date" />
+                </Box>
+                <Box class="form_control">
+                    <label htmlFor="">End Date</label>
+                    <input type="email" placeholder="End Date" />
+                </Box>
+                <Box class="form_control">
+                    <label htmlFor="">Course Name</label>
+                    <input type="email" placeholder="Course Name" />
+                </Box>
+                <Box class="form_control">
+                    <label htmlFor="">Specialisation</label>
+                    <input type="email" placeholder="Specialisation" />
+                </Box>
+                {/* <Box class="form_control">
+                    <label htmlFor=""></label>
+                    <input type="password" placeholder="Password" />
+                </Box> */}
+                <Box class="form_control">
+                    <button type="submit">Create Professional Information</button>
+                </Box>
+               
+                <br />
+                <br />
+                <hr />
+                <Box className="form_bottom" display="flex" justifyContent="space-between">
+                    <a href="#">
+                        Registration
+                    </a>
+
+                    <Box class="form_control">
+                    <button type="submit">Click Next to continue filling your profile</button>
+                </Box>
+                </Box>
+            </form>
+>>>>>>> a32e4f9826d4afeebfe82e1614c5bfab91279129:frontend/src/pages/modules/Professional/ProfessionalInformation.jsx
         </div>
     </div>
      <div class="col-md-4">
