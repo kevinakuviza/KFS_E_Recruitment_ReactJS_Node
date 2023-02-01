@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles, Box } from '@material-ui/core';
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 const useStyles = makeStyles({
     loginpage: {
         minWidth: '100vw',
@@ -116,58 +117,111 @@ export function ProfessionalInformation() {
 
 
     return (
-        <div className={classes.loginpage}>
-            <form action="" className="formWrapper">
-                <Box className="form_header" textAlign="center" m={2}>
-                    <a href="#"> <img src={require('../kfs.png')} alt="" /></a>
-                </Box>
-                {/* <Box className="btn_wrapper">
-                    <div ref={design_show} className={`btn_design_show `}></div>
-                    <button type="button" onClick={btnFunc} className="active">E-mail</button>
-                    <button type="button" onClick={btnFunc}>API Key</button>
-                </Box> */}
-                <Box class="form_control">
-                    <label htmlFor="">Institution Name</label>
-                    <input type="email" placeholder="Institution Name" />
-                </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Start Date</label>
-                    <input type="email" placeholder="Start Date" />
-                </Box>
-                <Box class="form_control">
-                    <label htmlFor="">End Date</label>
-                    <input type="email" placeholder="End Date" />
-                </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Course Name</label>
-                    <input type="email" placeholder="Course Name" />
-                </Box>
-                <Box class="form_control">
-                    <label htmlFor="">Specialisation</label>
-                    <input type="email" placeholder="Specialisation" />
-                </Box>
-                {/* <Box class="form_control">
-                    <label htmlFor=""></label>
-                    <input type="password" placeholder="Password" />
-                </Box> */}
-                <Box class="form_control">
-                    <button type="submit">Create Professional Information</button>
-                </Box>
-               
-                <br />
-                <br />
-                <hr />
-                <Box className="form_bottom" display="flex" justifyContent="space-between">
-                    <a href="#">
-                        Registration
-                    </a>
-
-                    <Box class="form_control">
-                    <button type="submit">Click Next to continue filling your profile</button>
-                </Box>
-                </Box>
-            </form>
+        <React.Fragment>
+                <div class="row">
+        <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">First Name</label>
+            <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+            name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+         
+                <span class="invalid-feedback" role="alert">
+                        <strong></strong>
+                </span>
+          
         </div>
+    </div>
+     <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Sur Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Last Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Last Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">First Name</label>
+            <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+            name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+         
+                <span class="invalid-feedback" role="alert">
+                        <strong></strong>
+                </span>
+          
+        </div>
+    </div>
+     <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Sur Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Last Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name" value="{{ old('sname') }}"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ <div class="col-md-4">
+     <div class="form-group">
+         <label class="control-label">Last Name</label>
+         <input type="text" class="form-control @error('sname') is-invalid @enderror" 
+         name="sname" placeholder="Enter Sur Name"/>
+      
+             <span class="invalid-feedback" role="alert">
+                     <strong></strong>
+             </span>
+       
+     </div>
+ </div>
+ {/* <div class="form-group">
+                                   <button type="submit" class=" d-sm-inline-block btn btn-primary btn-xs  shadow-sm btn-sm" style="background-color:#cb0c9f;color: floralwhite;width: 150px;">
+
+                                    </button>                            
+                              </div> */}
+ </div>
+ </React.Fragment>
     )
 }
 export default ProfessionalInformation;
